@@ -1,0 +1,40 @@
+version: 2.0
+
+reference:
+  work_dir: &work_dir /go/src/github.com/KeisukeYamashita/go-ethrpc
+  vendor_path: &vendor_path /go/src/github.com/KeisukeYamashita/go-ethrpc/vendor
+  golang_container_config: &golang_container_config
+    docker:
+    - image: circleci/golang:1.9
+      environment:
+        VENDOR_PATH: *vendor_path
+    working_directory: *work_dir
+
+  vendoring: &vendoring
+    run:
+      name: Vendoring
+      command: |
+        if [ ! -e ${VENDOR_PATH} ]; then
+          go get -u -v github.com/golang/dep/cmd/dep
+          dep ensure -v
+        fi
+  
+jobs:
+  test:
+    <<: *golang_container_config
+    steps:
+      - checkout
+      - *vendoring
+      - run:
+          name: Run Test
+          command: |
+            go get github.com/golang/lint/golint
+            golint $(go list ./... | grep -v vendor)
+            go vet $(go list ./... | grep -v vendor)
+            GO_ENV=test go test -race $(go list ./... | grep -v vendor)
+workflows:
+  version: 2
+  test:
+    jobs:
+      - test:
+          context: go-ethrpc

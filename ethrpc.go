@@ -20,7 +20,7 @@ type RPCClient struct {
 RPCer ...
 */
 type RPCer interface {
-	GetBlockHash(height int32) (string, error)
+	GetBlockNumber() (string, error)
 }
 
 /*

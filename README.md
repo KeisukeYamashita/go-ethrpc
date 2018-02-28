@@ -93,7 +93,7 @@ GO_ENV=test go test ethrpc
 ```
 
 ## Contribution
-To contribute, just send me a pull request!
+To contribute, just send us a pull request!
 If it is valid, you will be added on the contribution doc in `/doc/contributor.md` .
 
 ## Other Blockchain Libraries
@@ -103,4 +103,5 @@ There is a bitcoin version for this, it might help your application.
 
 ## License
 Copyright 2018 Keisuke Yamashita Hayashi Masaya.
+
 Licensed under the Apache 2.0 license.

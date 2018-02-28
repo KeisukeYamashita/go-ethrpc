@@ -44,7 +44,7 @@ import (
 
 func main() {
 	c := NewRPCClient(os.Getenv("ETHD_ENDPOINT"))
-	address := "my88QLpf2RYYDdNMmDwYvfx6TFc6NXaELa"
+	address := "0x809826cceAb68c387726af962713b64Cb5Cb3CCA"
 	balance := c.GetBalance(address)
 	fmt.Print(balance) // 0.13514 ETH
 }
@@ -60,7 +60,7 @@ curl -X "POST" "<YOUR_GETH_NODE>" \
   "method": "getbalance",
   "id": "1",
   "params": [
-    "my88QLpf2RYYDdNMmDwYvfx6TFc6NXaELa"
+    "0x809826cceAb68c387726af962713b64Cb5Cb3CCA"
   ]
 }'
 ```

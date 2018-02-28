@@ -2,9 +2,9 @@
 
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![CircleCI](https://circleci.com/gh/KeisukeYamashita/go-ethrpc/tree/develop.svg?style=svg)](https://circleci.com/gh/KeisukeYamashita/go-ethrpc/tree/develop)
 [![Job Status](https://inspecode.rocro.com/badges/github.com/KeisukeYamashita/go-ethrpc/status?token=p273sFfQS5RMvjwD2lHfaiXcFW-B3-Ahs32p8DnrK40)](https://inspecode.rocro.com/jobs/github.com/KeisukeYamashita/go-ethrpc/latest?completed=true)
 [![Report](https://inspecode.rocro.com/badges/github.com/KeisukeYamashita/go-ethrpc/report?token=p273sFfQS5RMvjwD2lHfaiXcFW-B3-Ahs32p8DnrK40&branch=master)](https://inspecode.rocro.com/reports/github.com/KeisukeYamashita/go-ethrpc/branch/master/summary)
-[![CircleCI](https://circleci.com/gh/KeisukeYamashita/go-ethrpc.svg?style=svg)](https://circleci.com/gh/KeisukeYamashita/go-ethrpc)
 
 
 go-ethrpc is a Go library use for interacting to the ethereum node from your server with JSON-RPC which is a standard protocol for blockchain.
@@ -95,7 +95,7 @@ GO_ENV=test go test ethrpc
 ```
 
 ## Contribution
-To contribute, just send me a pull request!
+To contribute, just send us a pull request!
 If it is valid, you will be added on the contribution doc in `/doc/contributor.md` .
 
 ## Other Blockchain Libraries
@@ -105,4 +105,5 @@ There is a bitcoin version for this, it might help your application.
 
 ## License
 Copyright 2018 Keisuke Yamashita Hayashi Masaya.
+
 Licensed under the Apache 2.0 license.

@@ -2,6 +2,7 @@
 
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![CircleCI](https://circleci.com/gh/KeisukeYamashita/go-ethrpc.svg?style=svg)](https://circleci.com/gh/KeisukeYamashita/go-ethrpc)
 
 
 go-ethrpc is a Go library use for interacting to the ethereum node from your server with JSON-RPC which is a standard protocol for blockchain.
@@ -38,14 +39,14 @@ package main
 
 import (
   "fmt"
-  btcrpc "github.com/KeisukeYamashita/go-ethrpc"
+  ethrpc "github.com/KeisukeYamashita/go-ethrpc"
   )
 
 func main() {
 	c := NewRPCClient(os.Getenv("ETHD_ENDPOINT"))
 	address := "my88QLpf2RYYDdNMmDwYvfx6TFc6NXaELa"
 	balance := c.GetBalance(address)
-	fmt.Print(balance) // 0.13514 BTC
+	fmt.Print(balance) // 0.13514 ETH
 }
 ```
 
@@ -70,13 +71,7 @@ It'll return a JSON.
 
 | method| discription |
 |:----:|:----:|
-| getNewAddress | creates a new address to your account. |
-| getBalance | get the balance of your address. |
-| getBlockHash | get the hash of the block. |
-| getBlock | get the block by hash of the block. |
-| getBlockCount | get the newest block count by hash of the block. |
-| decodeTransaction | decode the raw transaction to humanreadable transaction by hash of the block. |
-| getrawTransaction | get the raw transaction hash block count by hash of the block. |
+| eth_blockNumber | gets the most recent block height. |
 
 
 ## Use tests

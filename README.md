@@ -3,6 +3,8 @@
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![CircleCI](https://circleci.com/gh/KeisukeYamashita/go-ethrpc.svg?style=svg)](https://circleci.com/gh/KeisukeYamashita/go-ethrpc)
+[![Job Status](https://inspecode.rocro.com/badges/github.com/KeisukeYamashita/go-ethrpc/status?token=p273sFfQS5RMvjwD2lHfaiXcFW-B3-Ahs32p8DnrK40)](https://inspecode.rocro.com/jobs/github.com/KeisukeYamashita/go-ethrpc/latest?completed=true)
+[![Report](https://inspecode.rocro.com/badges/github.com/KeisukeYamashita/go-ethrpc/report?token=p273sFfQS5RMvjwD2lHfaiXcFW-B3-Ahs32p8DnrK40&branch=master)](https://inspecode.rocro.com/reports/github.com/KeisukeYamashita/go-ethrpc/branch/master/summary)
 
 
 go-ethrpc is a Go library use for interacting to the ethereum node from your server with JSON-RPC which is a standard protocol for blockchain.

@@ -49,3 +49,39 @@ func (c *RPCClient) GetBlockNumber() (string, error) {
 	resp.GetObject(&heightHex)
 	return heightHex, nil
 }
+
+/*
+GetGasPrice gets the value of gas price with hex string
+*/
+func (c *RPCClient) GetGasPrice() (string, error) {
+	resp, err := c.RPCClient.Call("eth_gasprice")
+	if err != nil {
+		return "", err
+	}
+
+	if resp.Error != nil {
+		return "", errors.New(resp.Error.Message)
+	}
+
+	var gasPrice string
+	resp.GetObject(&gasPrice)
+	return gasPrice, nil
+}
+
+/*
+GetBalance gets the balance of eth with the given address
+*/
+func (c *RPCClient) GetBalance(addr string) (string, error) {
+	resp, err := c.RPCClient.Call("eth_getBalance", addr)
+	if err != nil {
+		return "", err
+	}
+
+	if resp.Error != nil {
+		return "", errors.New(resp.Error.Message)
+	}
+
+	var balance string
+	resp.GetObject(&balance)
+	return balance, nil
+}

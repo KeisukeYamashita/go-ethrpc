@@ -21,7 +21,7 @@ RPCer ...
 Interface for other jsonrpc.
 */
 type RPCer interface {
-	GetBlockHash(height int32) (string, error)
+	GetBlockNumber() (string, error)
 }
 
 /*

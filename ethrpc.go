@@ -18,12 +18,14 @@ type RPCClient struct {
 
 /*
 RPCer ...
+Interface for other jsonrpc.
 */
 type RPCer interface {
 	GetBlockHash(height int32) (string, error)
 }
 
 /*
+NewRPCClient ...
 NewRPCClient creates JSONRPC clients for your bitcoin node.
 */
 func NewRPCClient(endpoint string) *RPCClient {
@@ -33,6 +35,7 @@ func NewRPCClient(endpoint string) *RPCClient {
 }
 
 /*
+GetBlockNumber ...
 GetBlockNumber gets the most resent block height
 */
 func (c *RPCClient) GetBlockNumber() (string, error) {
@@ -51,6 +54,7 @@ func (c *RPCClient) GetBlockNumber() (string, error) {
 }
 
 /*
+GetBalance ...
 GetBalance gets the balance of eth with the given address
 */
 func (c *RPCClient) GetBalance(addr string) (string, error) {

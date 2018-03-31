@@ -18,12 +18,14 @@ type RPCClient struct {
 
 /*
 RPCer ...
+Interface for other jsonrpc.
 */
 type RPCer interface {
 	GetBlockNumber() (string, error)
 }
 
 /*
+NewRPCClient ...
 NewRPCClient creates JSONRPC clients for your bitcoin node.
 */
 func NewRPCClient(endpoint string) *RPCClient {
@@ -33,6 +35,7 @@ func NewRPCClient(endpoint string) *RPCClient {
 }
 
 /*
+GetBlockNumber ...
 GetBlockNumber gets the most resent block height
 */
 func (c *RPCClient) GetBlockNumber() (string, error) {
@@ -48,4 +51,23 @@ func (c *RPCClient) GetBlockNumber() (string, error) {
 	var heightHex string
 	resp.GetObject(&heightHex)
 	return heightHex, nil
+}
+
+/*
+GetBalance ...
+GetBalance gets the balance of eth with the given address
+*/
+func (c *RPCClient) GetBalance(addr string) (string, error) {
+	resp, err := c.RPCClient.Call("eth_getBalance", addr)
+	if err != nil {
+		return "", err
+	}
+
+	if resp.Error != nil {
+		return "", errors.New(resp.Error.Message)
+	}
+
+	var balance string
+	resp.GetObject(&balance)
+	return balance, nil
 }

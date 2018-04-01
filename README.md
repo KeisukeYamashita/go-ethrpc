@@ -88,7 +88,7 @@ cp .env.sample .env
 Then write in your endpoint in this file.
 
 
-Finally run your test. It will pass if your bitcoin node is setted up correctly.
+Finally run your test. It will pass if your ethereum node is setted up correctly.
 
 ```
 GO_ENV=test go test ethrpc

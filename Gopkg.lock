@@ -2,7 +2,7 @@
 
 
 [[projects]]
-  name = "github.com/KeisukeYamashita/jsonrpc"
+  name = "github.com/KeisukeYamashita/go-jsonrpc"
   packages = ["."]
   revision = "af3b3899128285b8a17568bb7936824759a12873"
   version = "v1.0.1"
@@ -48,6 +48,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "1b21adc56cbbc405287c451ea49243490b4519518cd3f2b2f1fc873254be5d81"
+  inputs-digest = "d8fd72a73447ff1ab490f6f46b1961ff49023d492eba42f92eb073e970e978ab"
   solver-name = "gps-cdcl"
   solver-version = 1

@@ -104,6 +104,6 @@ There is a bitcoin version for this, it might help your application.
 - [go-btcrpc](https://github.com/KeisukeYamashita/go-btcrpc)
 
 ## License
-Copyright 2018 Keisuke Yamashita Hayashi Masaya.
+Copyright 2018 Yamashita Keisuke.
 
 Licensed under the Apache 2.0 license.

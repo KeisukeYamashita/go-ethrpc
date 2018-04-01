@@ -78,7 +78,7 @@ It'll return a JSON.
 | eth_blockNumber | gets the most recent block height. |
 
 
-## Use tests
+## Run tests
 Set up your environmental valiables in `.env` to conduct this test.
 
 ```
